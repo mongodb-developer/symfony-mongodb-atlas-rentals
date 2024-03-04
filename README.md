@@ -46,17 +46,19 @@ Clone the project
 git clone https://github.com/mongodb-developer/symfony-mongodb-atlas-rentals.git
 ```
 
+Setup the symfony .env file at the root level
+```
+MONGODB_URL=<your_mongodb_atlas_uri>
+MONGODB_DB=symfony
+```
+
+
 Install dependencies
 ```
 cd symfony-mongodb-atlas-rentals
 composer install
 ```
 
-Setup the symfony .env file at the root level
-```
-MONGODB_URL=<your_mongodb_atlas_uri>
-MONGODB_DB=symfony
-```
 
 ## Run the project
 ```
