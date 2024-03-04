@@ -1,0 +1,37 @@
+{# templates/rental/bookings.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}My Bookings{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>My Bookings</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Rental</th>
+                    <th>Confirmation</th>
+                    <th>Location</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                    <tr>
+                        <td><a href="{{ path('rental_details', {'id': booking.rentalId}) }}">
+                            {{booking.rentalName }}</a></td>
+                        <td>{{booking.id}}</td>
+                        <td>{{ booking.location }}</td>
+                        <td>{{ booking.startDate|date('Y-m-d') }}</td>
+                        <td>{{ booking.endDate|date('Y-m-d') }}</td>
+                        <td>{{ booking.totalCost }}$</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}               
+                     

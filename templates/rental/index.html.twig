@@ -1,0 +1,54 @@
+{# templates/rental/index.html.twig #}
+{% set currentCity = app.request.query.get('city') %}
+{% set currentCheckIn = app.request.query.get('check_in') %}
+{% set currentCheckOut = app.request.query.get('check_out') %}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Rental List{% endblock %}
+
+{% block body %}
+    <div class="container">
+           <h2>Search Rentals</h2>
+        <form action="{{ path('rental_index') }}" method="get">
+            <div class="form-group">
+                <label for="city">Location:</label>
+                <input type="text" id="city" name="city" class="form-control" value="{{ app.request.query.get('city') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="check_in">Check-in Date:</label>
+                <input type="date" id="check_in" name="check_in" class="form-control" value="{{ app.request.query.get('check_in') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="check_out">Check-out Date:</label>
+                <input type="date" id="check_out" name="check_out" class="form-control" value="{{ app.request.query.get('check_out') }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        
+       
+        <a href="{{ path('rental_create') }}" class="btn btn-success my-3">Create New Rental</a>
+        <div class="row">
+            {% for rental in rentals %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>
+                                <a href="{{ path('rental_details', {
+                                    'id': rental.id,
+                                    'city': currentCity,
+                                    'check_in': currentCheckIn,
+                                    'check_out': currentCheckOut
+                                }) }}">{{ rental.name }}</a></h4>
+                            <p class="card-text"><b>Location:</b> {{ rental.location }}</p>
+                            <p class="card-text"><b>Per night:</b> {{ rental.nightCost }}$</p>
+                            
+                            <!-- Add more rental details here -->
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

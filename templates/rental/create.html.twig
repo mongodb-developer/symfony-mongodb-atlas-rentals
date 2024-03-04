@@ -1,0 +1,42 @@
+{# templates/rental/create.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Rental{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>Create Rental</h2>
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+        
+        <div class="form-group">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.name) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.location) }}
+            {{ form_widget(form.location, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.location) }}
+        </div>
+
+         <div class="form-group">
+            {{ form_label(form.nightCost) }}
+            {{ form_widget(form.nightCost, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.nightCost) }}
+        </div>
+        <div class="form-group">
+            <label for="start_date">Availability Start Date:</label>
+            <input type="date" id="start_date" name="start_date" class="form-control" value="2024-01-01" required>
+        </div>
+        <div class="form-group">
+            <label for="end_date">Availability End Date:</label>
+            <input type="date" id="end_date" name="end_date" class="form-control" value="2026-01-01" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-success">Create</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

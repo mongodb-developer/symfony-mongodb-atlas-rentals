@@ -1,0 +1,31 @@
+{# templates/rental/details.html.twig #}
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Rental Details{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h2 class="mb-3"><i class="fas fa-rental"></i> {{ rental.name }}</h2>
+        <p><i class="fas fa-map-marker-alt"></i>  {{ rental.location }}</p>
+        <p><i class="fas fa-tag"></i> <strong> Night Rate:</strong> {{ rental.nightCost }}$</p>
+         <p><i class="fas fa-tag"></i> <strong> Total Rate:</strong> {{ (total_price is not same as 0 )? total_price ~ '$' : 'N/A' }}</p>
+        <!-- Add more rental details here -->
+
+        <h3 class="mt-4">Book a Room</h3>
+        <form class="mt-3" action="{{ path('rental_book', {'rentalId': rental.id}) }}" method="post">
+            <div class="form-group">
+                <label for="start_date">Start Date</label>
+                <input id="start_date" type="date" name="startDate" class="form-control" value="{{ app.request.query.get('check_in')  }}">
+            </div>
+            <div class="form-group">
+                <label for="end_date">End Date</label>
+                <input id="end_date" type="date" name="endDate" class="form-control" value="{{app.request.query.get('check_out') }}">
+            </div>
+            <button type="submit" class="btn btn-success">Book</button>
+        </form>
+    </div>
+{% endblock %}
+

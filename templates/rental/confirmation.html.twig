@@ -1,0 +1,18 @@
+{# templates/rental/confirmation.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking Confirmation{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>Booking Confirmation</h2>
+        <p>Rental: {{ rental.name }}</p>
+        <p>Location: {{ rental.location }}</p>
+        <p>Check-in Date: {{ booking.startDate|date('Y-m-d') }}</p>
+        <p>Check-out Date: {{ booking.endDate|date('Y-m-d') }}</p>
+        <p>Total Price: {{ totalPrice }}$</p>
+
+        <a href="{{ path('rental_index') }}" class="btn btn-success my-3">Back</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MongoDB Private Home aPartments Finder!{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="icon" type="image/x-icon" href="/public/favicon.png">
+     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+      <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    {% block head %}{% endblock %}
+</head>
+<body>
+     <div class="header">
+        <a href="{{ path('rental_index') }}">
+        <img class="logo" src="{{ asset('php-logo.png') }}" alt="Private Home aPartments Logo"/>
+        </a>
+
+        <h1>Private Home aPartments</h1>
+        <a href="{{ path('booking_index') }}">My Bookings</a>
+    </div>
+    {% block body %}{% endblock %}
+</body>
+</html>

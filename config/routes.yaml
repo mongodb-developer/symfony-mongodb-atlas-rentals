@@ -1,0 +1,36 @@
+# controllers:
+#     resource:
+#         path: ../src/Controller/
+#         namespace: App\Controller
+#     type: attribute
+
+# main routes
+rental_index:
+    path: /
+    controller: App\Controller\RentalController::index
+    methods: [GET]
+
+# create a new rental
+rental_create:
+    path: /rental/create
+    controller: App\Controller\RentalController::create
+    methods: [GET, POST]
+
+# show a rental
+rental_details:
+    path: /rental/{id}
+    controller: App\Controller\RentalController::details
+    methods: [GET]
+
+# book a rental
+rental_book:
+    path: /rental/book/{rentalId}
+    controller: App\Controller\RentalController::book
+    methods: [POST]
+
+# list all bookings
+booking_index:
+    path: /booking
+    controller: App\Controller\BookingController::index
+    methods: [GET]
+
