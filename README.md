@@ -44,6 +44,7 @@ Please follow our [quick start](https://www.mongodb.com/docs/atlas/getting-start
 Clone the project
 ```
 git clone https://github.com/mongodb-developer/symfony-mongodb-atlas-rentals.git
+cd symfony-mongodb-atlas-rentals
 ```
 
 Setup the symfony .env file at the root level
@@ -55,7 +56,6 @@ MONGODB_DB=symfony
 
 Install dependencies
 ```
-cd symfony-mongodb-atlas-rentals
 composer install
 ```
 
