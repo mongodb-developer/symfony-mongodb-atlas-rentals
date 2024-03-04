@@ -72,6 +72,10 @@ Sometimes it is useful to clear the console cache.
 php bin/console cache:clear
 ```
 
+## Access the UI
+
+Open your browser on `http://localhost:8000`
+
 ## Desclaimer 
 
 This is not a MongoDB Inc. official product, use at your own risk.
