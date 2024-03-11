@@ -1,0 +1,1858 @@
+[{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a0"
+  },
+  "name": "Lind Group",
+  "location": "Connfurt",
+  "night_cost": 405,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a1"
+  },
+  "name": "Lesch Group",
+  "location": "Kissimmee",
+  "night_cost": 201,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a6"
+  },
+  "name": "Mohr, Fritsch and Wisozk",
+  "location": "Langborough",
+  "night_cost": 379,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3aa"
+  },
+  "name": "Rempel - Durgan",
+  "location": "North Antonetta",
+  "night_cost": 337,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ad"
+  },
+  "name": "Jenkins - Turcotte",
+  "location": "Henderson",
+  "night_cost": 427,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b4"
+  },
+  "name": "Kuhlman, Schowalter and West",
+  "location": "Marionton",
+  "night_cost": 183,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ba"
+  },
+  "name": "Maggio, Wisoky and Blick",
+  "location": "North Antonetta",
+  "night_cost": 238,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3bc"
+  },
+  "name": "Walker - Zieme",
+  "location": "Port Asa",
+  "night_cost": 133,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3be"
+  },
+  "name": "Heller, Hyatt and Jaskolski",
+  "location": "South Dagmarshire",
+  "night_cost": 77,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3bf"
+  },
+  "name": "Kreiger - Sauer",
+  "location": "Bahringertown",
+  "night_cost": 92,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c0"
+  },
+  "name": "Reichert LLC",
+  "location": "Olympia",
+  "night_cost": 365,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c6"
+  },
+  "name": "Kreiger and Sons",
+  "location": "North Kaleighshire",
+  "night_cost": 474,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3cf"
+  },
+  "name": "Reichel Group",
+  "location": "New Montemouth",
+  "night_cost": 326,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d0"
+  },
+  "name": "Lesch, Dooley and Bartell",
+  "location": "Kettering",
+  "night_cost": 208,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d1"
+  },
+  "name": "Luettgen Inc",
+  "location": "North Braulio",
+  "night_cost": 370,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d3"
+  },
+  "name": "Strosin, Oberbrunner and Wunsch",
+  "location": "Janefurt",
+  "night_cost": 472,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d8"
+  },
+  "name": "Johnston - Wisozk",
+  "location": "West Everardo",
+  "night_cost": 470,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3db"
+  },
+  "name": "Upton - Reichert",
+  "location": "Bernierfurt",
+  "night_cost": 417,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e0"
+  },
+  "name": "Lubowitz, Kuhlman and Bailey",
+  "location": "Wehnerfort",
+  "night_cost": 57,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ef"
+  },
+  "name": "Fahey, Leannon and Gleichner",
+  "location": "Langborough",
+  "night_cost": 254,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f0"
+  },
+  "name": "Roberts, Rogahn and Dooley",
+  "location": "Reichertland",
+  "night_cost": 348,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f1"
+  },
+  "name": "Shanahan - Boyle",
+  "location": "Franeckiview",
+  "night_cost": 325,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f4"
+  },
+  "name": "Abbott LLC",
+  "location": "Connfurt",
+  "night_cost": 152,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3fb"
+  },
+  "name": "Kautzer, Macejkovic and Fisher",
+  "location": "South Darienbury",
+  "night_cost": 188,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b39a"
+  },
+  "name": "Boehm, Hettinger and Huels",
+  "location": "Lake Zackton",
+  "night_cost": 127,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b39b"
+  },
+  "name": "Wilkinson - Dare",
+  "location": "Metairie",
+  "night_cost": 260,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b39c"
+  },
+  "name": "Skiles and Sons",
+  "location": "Shoreline",
+  "night_cost": 319,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a9"
+  },
+  "name": "Mohr, Fritsch and Wisozk",
+  "location": "West Dorris",
+  "night_cost": 298,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ab"
+  },
+  "name": "Nader - Fritsch",
+  "location": "Venamouth",
+  "night_cost": 245,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ac"
+  },
+  "name": "Rogahn, Armstrong and Goyette",
+  "location": "Wehnerfort",
+  "night_cost": 246,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ae"
+  },
+  "name": "Lesch Group",
+  "location": "East Filibertofurt",
+  "night_cost": 201,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3af"
+  },
+  "name": "Welch, Lockman and Hand",
+  "location": "North Nona",
+  "night_cost": 484,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b5"
+  },
+  "name": "Lesch - Jakubowski",
+  "location": "West Estaton",
+  "night_cost": 250,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b9"
+  },
+  "name": "Prohaska, Balistreri and Walker",
+  "location": "New Solonmouth",
+  "night_cost": 268,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c8"
+  },
+  "name": "Olson, Olson and Carter",
+  "location": "Port Salvador",
+  "night_cost": 436,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3cc"
+  },
+  "name": "Hills and Sons",
+  "location": "New Davonteside",
+  "night_cost": 497,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d2"
+  },
+  "name": "Hand, Bernhard and Kessler",
+  "location": "North Sigmund",
+  "night_cost": 371,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d6"
+  },
+  "name": "Kautzer, Macejkovic and Fisher",
+  "location": "North Braulio",
+  "night_cost": 249,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3da"
+  },
+  "name": "Russel - Hintz",
+  "location": "New Ansley",
+  "night_cost": 350,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2024-03-21T00:00:00Z"
+      }
+    },
+    {
+      "start_date": {
+        "$date": "2024-03-29T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3dd"
+  },
+  "name": "Kreiger and Sons",
+  "location": "Lake Brianne",
+  "night_cost": 290,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3de"
+  },
+  "name": "Lesch - Carter",
+  "location": "West Brendonville",
+  "night_cost": 89,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3df"
+  },
+  "name": "Brown LLC",
+  "location": "New Davonteside",
+  "night_cost": 126,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e1"
+  },
+  "name": "Upton - Reichert",
+  "location": "Tallahassee",
+  "night_cost": 88,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e3"
+  },
+  "name": "Welch, Lockman and Hand",
+  "location": "Cuyahoga Falls",
+  "night_cost": 128,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e6"
+  },
+  "name": "Durgan - Stamm",
+  "location": "Port Asa",
+  "night_cost": 131,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ec"
+  },
+  "name": "Lubowitz, Kuhlman and Bailey",
+  "location": "Port Ricky",
+  "night_cost": 97,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ed"
+  },
+  "name": "Doyle Group",
+  "location": "Reichertland",
+  "night_cost": 493,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f2"
+  },
+  "name": "Hegmann Inc",
+  "location": "West Dellside",
+  "night_cost": 253,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f6"
+  },
+  "name": "Gutkowski Inc",
+  "location": "North Frankie",
+  "night_cost": 348,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2024-04-24T00:00:00Z"
+      }
+    },
+    {
+      "start_date": {
+        "$date": "2024-04-25T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f8"
+  },
+  "name": "Orn, Gerlach and Runolfsdottir",
+  "location": "West Everardo",
+  "night_cost": 176,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f9"
+  },
+  "name": "Skiles and Sons",
+  "location": "Cuyahoga Falls",
+  "night_cost": 398,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3fa"
+  },
+  "name": "Orn, Gerlach and Runolfsdottir",
+  "location": "Reichertland",
+  "night_cost": 84,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3fd"
+  },
+  "name": "Bogan - Daniel",
+  "location": "Haneborough",
+  "night_cost": 223,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b39d"
+  },
+  "name": "Cartwright - Schuster",
+  "location": "Haneborough",
+  "night_cost": 138,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b39e"
+  },
+  "name": "Prohaska, Balistreri and Walker",
+  "location": "New Solonmouth",
+  "night_cost": 372,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b39f"
+  },
+  "name": "Rogahn, Armstrong and Goyette",
+  "location": "Elisabethland",
+  "night_cost": 200,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a2"
+  },
+  "name": "Skiles and Sons",
+  "location": "Olympia",
+  "night_cost": 246,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a3"
+  },
+  "name": "Kohler LLC",
+  "location": "West Dorris",
+  "night_cost": 54,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a5"
+  },
+  "name": "Cronin, Oberbrunner and Beier",
+  "location": "East Providence",
+  "night_cost": 332,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a7"
+  },
+  "name": "Cronin, Oberbrunner and Beier",
+  "location": "Lake Ludie",
+  "night_cost": 241,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2024-04-02T00:00:00Z"
+      }
+    },
+    {
+      "start_date": {
+        "$date": "2024-04-11T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b1"
+  },
+  "name": "Hand, Bernhard and Kessler",
+  "location": "Connfurt",
+  "night_cost": 76,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b2"
+  },
+  "name": "Renner - Prosacco",
+  "location": "Cruzshire",
+  "night_cost": 171,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b3"
+  },
+  "name": "Kuhlman, Schowalter and West",
+  "location": "Williemouth",
+  "night_cost": 428,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c3"
+  },
+  "name": "Stracke - Wisozk",
+  "location": "Reichertland",
+  "night_cost": 351,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c4"
+  },
+  "name": "Kuhlman, Schowalter and West",
+  "location": "West Amiya",
+  "night_cost": 307,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c7"
+  },
+  "name": "Weber Inc",
+  "location": "New Kyle",
+  "night_cost": 286,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c9"
+  },
+  "name": "Labadie LLC",
+  "location": "East Vicentaborough",
+  "night_cost": 359,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ca"
+  },
+  "name": "Walker - Zieme",
+  "location": "New Ansley",
+  "night_cost": 257,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d5"
+  },
+  "name": "Mertz, Gusikowski and Lemke",
+  "location": "West Brendonville",
+  "night_cost": 351,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3dc"
+  },
+  "name": "Carroll Group",
+  "location": "North Braulio",
+  "night_cost": 82,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e2"
+  },
+  "name": "Rogahn, Armstrong and Goyette",
+  "location": "Farmington",
+  "night_cost": 332,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e4"
+  },
+  "name": "Strosin, Oberbrunner and Wunsch",
+  "location": "South Verdieton",
+  "night_cost": 311,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ea"
+  },
+  "name": "Abernathy Inc",
+  "location": "Lake Ludie",
+  "night_cost": 196,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a4"
+  },
+  "name": "Nader - Fritsch",
+  "location": "Olympia",
+  "night_cost": 107,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3a8"
+  },
+  "name": "Roberts, Rogahn and Dooley",
+  "location": "Lake Adell",
+  "night_cost": 217,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2024-03-04T00:00:00Z"
+      }
+    },
+    {
+      "start_date": {
+        "$date": "2024-03-13T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b0"
+  },
+  "name": "Abernathy Inc",
+  "location": "Padbergmouth",
+  "night_cost": 286,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b6"
+  },
+  "name": "Rodriguez - Spencer",
+  "location": "Williemouth",
+  "night_cost": 383,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b7"
+  },
+  "name": "Kautzer, Macejkovic and Fisher",
+  "location": "Kuvalismouth",
+  "night_cost": 368,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3b8"
+  },
+  "name": "Heller, Hyatt and Jaskolski",
+  "location": "West Brendonville",
+  "night_cost": 408,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3bb"
+  },
+  "name": "Koepp and Sons",
+  "location": "West Lucy",
+  "night_cost": 100,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3bd"
+  },
+  "name": "Kuhlman, Schowalter and West",
+  "location": "West Amiya",
+  "night_cost": 494,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c1"
+  },
+  "name": "Gerhold - Rowe",
+  "location": "Padbergmouth",
+  "night_cost": 72,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c2"
+  },
+  "name": "Stracke - Kertzmann",
+  "location": "Buffalo",
+  "night_cost": 290,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3c5"
+  },
+  "name": "Lesch - Jakubowski",
+  "location": "New Kyle",
+  "night_cost": 222,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3cb"
+  },
+  "name": "Lesch, Dooley and Bartell",
+  "location": "West Janetborough",
+  "night_cost": 250,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3cd"
+  },
+  "name": "Kohler LLC",
+  "location": "North Antonetta",
+  "night_cost": 163,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ce"
+  },
+  "name": "Stracke - Kertzmann",
+  "location": "Wehnerfort",
+  "night_cost": 93,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d4"
+  },
+  "name": "Quigley, Bins and Becker",
+  "location": "Lake Ludie",
+  "night_cost": 408,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d7"
+  },
+  "name": "Walker Inc",
+  "location": "Johnnieburgh",
+  "night_cost": 416,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3d9"
+  },
+  "name": "Lubowitz, Kuhlman and Bailey",
+  "location": "Lake Zackton",
+  "night_cost": 146,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e5"
+  },
+  "name": "Legros, Tillman and Hodkiewicz",
+  "location": "Lake Adell",
+  "night_cost": 91,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e7"
+  },
+  "name": "Steuber, Luettgen and Corkery",
+  "location": "Erynside",
+  "night_cost": 202,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e8"
+  },
+  "name": "Reichert LLC",
+  "location": "Bernierfurt",
+  "night_cost": 386,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3e9"
+  },
+  "name": "Walker Inc",
+  "location": "Padbergmouth",
+  "night_cost": 61,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3eb"
+  },
+  "name": "Pouros - Brakus",
+  "location": "North Frankie",
+  "night_cost": 390,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3ee"
+  },
+  "name": "Hand, Bernhard and Kessler",
+  "location": "West Dorris",
+  "night_cost": 221,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f3"
+  },
+  "name": "Lubowitz, Kuhlman and Bailey",
+  "location": "Buffalo",
+  "night_cost": 70,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f5"
+  },
+  "name": "Skiles and Sons",
+  "location": "Venamouth",
+  "night_cost": 394,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3f7"
+  },
+  "name": "Kub and Sons",
+  "location": "Bernierfurt",
+  "night_cost": 354,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e58cbb00a610ba8536b3fc"
+  },
+  "name": "Bartell, Wehner and Schowalter",
+  "location": "New Wallaceberg",
+  "night_cost": 329,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e5b5edc903a013f3047742"
+  },
+  "name": "My Rental",
+  "location": "My Town",
+  "night_cost": 100,
+  "availability": [
+    {
+      "start_date": {
+        "$date": "2024-01-01T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2024-03-13T00:00:00Z"
+      }
+    },
+    {
+      "start_date": {
+        "$date": "2024-03-29T00:00:00Z"
+      },
+      "end_date": {
+        "$date": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+}]
