@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Document\Availability;
 use App\Document\Booking;
 use App\Document\Rental;
 use App\Form\RentalType;
 use DateTime;
-use Doctrine\Common\Collections\ArrayCollection;
+use DateTimeImmutable;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use MongoDB\BSON\Regex;
 use Psr\Log\LoggerInterface;
@@ -42,23 +41,25 @@ class RentalController extends AbstractController
     {
         // Get the city, check-in and check-out dates from the query parameters
         $city     = $request->query->get('city');
-        $checkIn  =  new DateTime($request->query->get('check_in'));
-        $checkOut =  new DateTime($request->query->get('check_out'));
+        $checkInInput = $request->query->get('check_in');
+        $checkOutInput = $request->query->get('check_out');
 
+        $checkIn = $checkInInput ? new DateTime($checkInInput) : null;
+        $checkOut = $checkOutInput ? new DateTime($checkOutInput) : null;
         // Fetch all the rentals
         if ($city && $checkIn && $checkOut) {
             // Fetch rentals based on city and availability
             // The availability field is an array of objects with start_date and end_date fields
             // So we use elemMatch to query the availability array and see if the user requested dates are available
-            $rentalRepository = $this->documentManager->getRepository(Rental::class);
-            $queryBuilder     = $rentalRepository->createQueryBuilder();
+            $rental_repository = $this->documentManager->getRepository(Rental::class);
+            $queryBuilder = $rental_repository->createQueryBuilder();
 
             $rentals = $queryBuilder
                 ->field('location')->equals(new Regex($city, 'i'))
                 ->field('availability')->elemMatch(
                     $queryBuilder->expr()
-                        ->field('start_date')->lte($checkIn)
-                        ->field('end_date')->gte($checkOut),
+                        ->field('startDate')->lte($checkIn)
+                        ->field('endDate')->gte($checkOut),
                 )
                 ->getQuery()
                 ->execute();
@@ -68,6 +69,7 @@ class RentalController extends AbstractController
         }
 
         // Render the rentals page
+        
         return $this->render('rental/index.html.twig', ['rentals' => $rentals]);
     }
 
@@ -76,14 +78,23 @@ class RentalController extends AbstractController
     #[Route('/rental/{id}', name: 'rental_details', methods: ['GET'])]
     public function details(Request $request, string $id): Response
     {
-        $checkIn  =  new DateTime($request->query->get('check_in'));
-        $checkOut =  new DateTime($request->query->get('check_out'));
+        $checkInInput = $request->query->get('check_in');
+        $checkOutInput = $request->query->get('check_out');
+
+        $checkIn = $checkInInput ? new DateTime($checkInInput) : null;
+        $checkOut = $checkOutInput ? new DateTime($checkOutInput) : null;
         $rental   = $this->documentManager->getRepository(rental::class)->find($id);
 
         // Calculate total price based on night cost and number of days
-        $interval   = $checkIn->diff($checkOut);
-        $days       = $interval->days;
-        $totalPrice = $days * $rental->getNightCost();
+        if ($checkIn && $checkOut) {
+            $interval   = $checkIn->diff($checkOut);
+            $days       = $interval->days;
+            $totalPrice =  $days * $rental->nightCost;
+        } else {
+            $totalPrice= 0;
+        }
+    
+
 
         if (! $rental) {
             throw $this->createNotFoundException('No rental found for id ' . $id);
@@ -92,7 +103,7 @@ class RentalController extends AbstractController
         // Render the rental details page
         return $this->render('rental/details.html.twig', [
             'rental' => $rental,
-            'total_price' => $totalPrice,
+            'totalPrice' => $totalPrice,
         ]);
     }
 
@@ -138,25 +149,32 @@ class RentalController extends AbstractController
         }
 
         // Get the start and end dates from the request
-        $startDate = new DateTime($request->request->get('startDate'));
-        $endDate   = new DateTime($request->request->get('endDate'));
+
+        $startDateInput = $request->request->get('startDate');
+        $endDateInput = $request->request->get('endDate');
+
+        $startDate = $startDateInput ? new DateTime($startDateInput) : null;
+        $endDate = $endDateInput ? new DateTime($endDateInput) : null;
+
+
+
 
         // Calculate total price based on night cost and number of days
         $interval   = $startDate->diff($endDate);
         $days       = $interval->days;
-        $totalPrice = $days * $rental->getNightCost();
+        $totalPrice = $days * $rental->nightCost;
 
         // Calculate new availability based on the booking dates
-        $newAvailability = $this->calcAvailabilitySlots($startDate, $endDate, $rental->getAvailability()->toArray());
+        $newAvailability = $rental->calcAvailabilitySlots($startDate, $endDate, $rental->availability->toArray());
 
         // Create and persist the booking
         $booking = new Booking();
-        $booking->setRentalId($rentalId);
-        $booking->setRentalName($rental->getName());
-        $booking->setStartDate($startDate);
-        $booking->setEndDate($endDate);
-        $booking->setTotalCost($totalPrice);
-        $rental->setAvailability($newAvailability);
+        $booking->rental = $rental;
+        $booking->rentalName = $rental->name;
+        $booking->startDate =  DateTimeImmutable::createFromMutable($startDate);
+        $booking->endDate =  DateTimeImmutable::createFromMutable($endDate);
+        $booking->totalCost = (int)$totalPrice;
+        $rental->availability = $newAvailability;
 
         // Persist the booking and rental
         $this->documentManager->persist($booking);
@@ -171,64 +189,5 @@ class RentalController extends AbstractController
         ]);
     }
 
-    private function calcAvailabilitySlots(DateTime $bookingStart, DateTime $bookingEnd, array $availability): ArrayCollection
-    {
-        // Create a new ArrayCollection to store the new availability
-        $newAvailability = new ArrayCollection();
-
-        // Loop through each period in the availability to calculate the new availability
-        foreach ($availability as $period) {
-            $periodStart = $period->getStartDate();
-            $periodEnd   = $period->getEndDate();
-
-            // Booking is entirely before this period
-            if ($bookingEnd < $periodStart) {
-                $newAvailability->add($period);
-                continue;
-            }
-
-            // Booking is entirely after this period
-            if ($bookingStart > $periodEnd) {
-                $newAvailability->add($period);
-                continue;
-            }
-
-            // Booking starts before the period and ends within it
-            if ($bookingStart <= $periodStart && $bookingEnd < $periodEnd) {
-                $newPeriod = new Availability();
-                $newPeriod->setStartDate($bookingEnd->modify('+1 day'));
-                $newPeriod->setEndDate($periodEnd);
-                $newAvailability->add($newPeriod);
-                continue;
-            }
-
-            // Booking starts during the period and ends after it
-            if ($bookingStart > $periodStart && $bookingEnd >= $periodEnd) {
-                $newPeriod = new Availability();
-                $newPeriod->setStartDate($periodStart);
-                $newPeriod->setEndDate($bookingStart->modify('-1 day'));
-                $newAvailability->add($newPeriod);
-                continue;
-            }
-
-            // Booking is entirely within the period
-            if ($bookingStart > $periodStart && $bookingEnd < $periodEnd) {
-                $newPeriod1 = new Availability();
-                $newPeriod1->setStartDate($periodStart);
-                $newPeriod1->setEndDate($bookingStart->modify('-1 day'));
-                $newAvailability->add($newPeriod1);
-
-                $newPeriod2 = new Availability();
-                $newPeriod2->setStartDate($bookingEnd->modify('+1 day'));
-                $newPeriod2->setEndDate($periodEnd);
-                $newAvailability->add($newPeriod2);
-                continue;
-            }
-
-            // Booking covers the entire period
-            // Do not add the period to newAvailability (effectively removing it)
-        }
-
-        return $newAvailability;
-    }
+    
 }

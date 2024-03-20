@@ -19,32 +19,10 @@ use Doctrine\ODM\MongoDB\Types\Type;
 class Availability
 {
     #[ODM\Field(type: Type::DATE)]
-    protected $start_date;
+    public DateTime $startDate;
 
     #[ODM\Field(type: Type::DATE)]
-    protected $end_date;
+    public DateTime $endDate;
 
-    public function getStartDate(): DateTime|null
-    {
-        return $this->start_date;
-    }
-
-    public function setStartDate(DateTime $start_date): self
-    {
-        $this->start_date = $start_date;
-
-        return $this;
-    }
-
-    public function getEndDate(): DateTime|null
-    {
-        return $this->end_date;
-    }
-
-    public function setEndDate(DateTime $end_date): self
-    {
-        $this->end_date = $end_date;
-
-        return $this;
-    }
+   
 }
