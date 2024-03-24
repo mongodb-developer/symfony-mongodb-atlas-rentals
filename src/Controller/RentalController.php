@@ -51,8 +51,8 @@ class RentalController extends AbstractController
             // Fetch rentals based on city and availability
             // The availability field is an array of objects with start_date and end_date fields
             // So we use elemMatch to query the availability array and see if the user requested dates are available
-            $rental_repository = $this->documentManager->getRepository(Rental::class);
-            $queryBuilder = $rental_repository->createQueryBuilder();
+            $rentalRepository = $this->documentManager->getRepository(Rental::class);
+            $queryBuilder = $rentalRepository->createQueryBuilder();
 
             $rentals = $queryBuilder
                 ->field('location')->equals(new Regex($city, 'i'))
