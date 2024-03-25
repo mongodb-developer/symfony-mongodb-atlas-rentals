@@ -172,7 +172,7 @@ class RentalController extends AbstractController
     }
 
     /**
-     * Edit action to edit an existing rental
+     * Book action to book a rental
      * 
      * @param Request $request - The request object
      * @param string  $id      - The rental id
