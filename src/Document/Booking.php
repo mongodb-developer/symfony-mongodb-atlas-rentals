@@ -1,4 +1,14 @@
 <?php
+/**
+ * Booking
+ * ---------------------
+ * This class is responsible for defining the booking document and its properties.
+ *
+ * @category Document
+ * @package  App\Document
+ * @author   pavel.duchovny 
+ * @license  apache-2.0
+ */
 
 declare(strict_types=1);
 
@@ -21,105 +31,26 @@ use Doctrine\ODM\MongoDB\Types\Type;
 class Booking
 {
     #[ODM\Id]
-    protected $id;
+    public  $id;
+
+    #[ODM\ReferenceOne(targetDocument: Rental::class)]
+    public Rental $rental;
 
     #[ODM\Field(type: Type::STRING)]
-    protected $rental_id;
+    public string $rentalName;
 
     #[ODM\Field(type: Type::STRING)]
-    protected $rental_name;
-
-    #[ODM\Field(type: Type::STRING)]
-    protected $location;
+    public string $location;
 
     #[ODM\Field(type: Type::INT)]
-    protected $total_cost;
+    public int $totalCost;
 
     #[ODM\Field(type: Type::DATE_IMMUTABLE)]
-    protected $start_date;
+    public DateTimeImmutable $startDate;
 
     #[ODM\Field(type: Type::DATE_IMMUTABLE)]
-    protected $end_date;
+    public DateTimeImmutable $endDate;
 
     // Add getters and setters for each property
-    public function getId(): string|null
-    {
-        return $this->id;
-    }
-
-    public function getRentalId(): string|null
-    {
-        return $this->rental_id;
-    }
-
-    public function setRentalId(string $rental_id): self
-    {
-        $this->rental_id = $rental_id;
-
-        return $this;
-    }
-
-    public function getRentalName(): string|null
-    {
-        return $this->rental_name;
-    }
-
-    public function setRentalName(string|null $rental_name): self
-    {
-        $this->rental_name = $rental_name;
-
-        return $this;
-    }
-
-    public function getLocation(): string|null
-    {
-        return $this->location;
-    }
-
-    public function setLocation(string $location): self
-    {
-        $this->location = $location;
-
-        return $this;
-    }
-
-    public function getTotalCost()
-    {
-        return $this->total_cost;
-    }
-
-    public function setTotalCost(int|null $total_cost): self
-    {
-        $this->total_cost = $total_cost;
-
-        return $this;
-    }
-
-    public function getStartDate(): DateTimeImmutable
-    {
-        return $this->start_date;
-    }
-
-    public function setStartDate(DateTime $start_date): void
-    {
-        if ($start_date instanceof DateTime) {
-            $start_date = DateTimeImmutable::createFromMutable($start_date);
-        }
-
-        $this->start_date = $start_date;
-    }
-
-    public function getEndDate(): DateTimeImmutable
-    {
-        return $this->end_date;
-    }
-
-    public function setEndDate(DateTime $end_date): void
-    {
-        if ($end_date instanceof DateTime) {
-            $end_date = DateTimeImmutable::createFromMutable($end_date);
-        }
-
-        $this->end_date = $end_date;
-    }
+   
 }
