@@ -1,4 +1,14 @@
 <?php
+/**
+ * Booking
+ * ---------------------
+ * This class is responsible for defining the booking document and its properties.
+ *
+ * @category Document
+ * @package  App\Document
+ * @author   pavel.duchovny 
+ * @license  apache-2.0
+ */
 
 declare(strict_types=1);
 

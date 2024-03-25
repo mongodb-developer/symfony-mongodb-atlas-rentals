@@ -1,4 +1,14 @@
 <?php
+/**
+ * Rental
+ * ---------------------
+ * This class is responsible for defining the rental document and its properties.
+ *
+ * @category Document
+ * @package  App\Document
+ * @author   pavel.duchovny 
+ * @license  apache-2.0
+ */
 
 declare(strict_types=1);
 
@@ -19,6 +29,7 @@ use Doctrine\ODM\MongoDB\Types\Type;
 #[
     MongoDB\Document(collection: 'rentals')
 ]
+
 class Rental
 {
     #[ODM\Id]
@@ -36,6 +47,12 @@ class Rental
     #[ODM\EmbedMany(targetDocument: Availability::class)]
     public Collection $availability;
 
+    /**
+     * __construct - 
+     * This function is responsible for initializing the Rental class.
+     * 
+     * @return void
+     */
     public function __construct()
     {
         $this->availability = new ArrayCollection();
@@ -48,9 +65,22 @@ class Rental
     }
 
    
-
-    public function calcAvailabilitySlots(DateTime $bookingStart, DateTime $bookingEnd, array $availability): ArrayCollection
-    {
+    /**
+     * Function : calcAvailabilitySlots 
+     * 
+     * This function is responsible for calculating the 
+     * availability slots based on the booking start and end dates.
+     * 
+     * @param DateTime $bookingStart - The booking start date
+     * @param DateTime $bookingEnd   - The booking end date
+     * @param array    $availability - The availability array
+     * 
+     * @return ArrayCollection - The new availability slots
+     */
+    public function calcAvailabilitySlots(DateTime $bookingStart, 
+        DateTime $bookingEnd, 
+        array $availability
+    ): ArrayCollection {
         // Create a new ArrayCollection to store the new availability
         $newAvailability = new ArrayCollection();
 

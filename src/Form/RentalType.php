@@ -1,5 +1,7 @@
 <?php
-
+/** 
+ * RentalType - This class is responsible for creating the form for the rental entity.]
+ **/
 declare(strict_types=1);
 
 namespace App\Form;
@@ -11,13 +13,19 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-/*
-    * RentalType
+/**
+ * RentalType
     ---------------------
-    * This class is responsible for creating the form for the rental entity.
-*/
+ * This class is responsible for creating the form for the rental entity.
+ **/
 class RentalType extends AbstractType
 {
+    /** 
+     *  buildForm -  This function is responsible for building the form for the rental entity.
+     * 
+     * @param FormBuilderInterface $builder - The form builder interface
+     * @param array                $options - The options for the form
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -27,10 +35,17 @@ class RentalType extends AbstractType
             // Add other fields as needed
     }
 
+    /** 
+     *  configureOptions - This function is responsible for setting the default options for the form.
+     * 
+     * @param OptionsResolver $resolver - The options resolver
+     * */
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setDefaults([
+        $resolver->setDefaults(
+            [
             'data_class' => Rental::class,
-        ]);
+            ]
+        );
     }
 }

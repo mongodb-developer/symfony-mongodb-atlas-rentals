@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * RentalController
+ * ---------------------
+ * 
+ * This class is responsible for handling the rental query and booking operations.
+ * 
+ * @category Controller
+ * @package  App\Controller
+ * @author   pavel.duchovny
+ * @license  apache-2.0
+ */
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -16,22 +28,31 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-/*
-    * RentalController
-    ---------------------
-    * This class is responsible for handling the rental query and booking operations.
-*/
+/**
+ * RentalController
+ * ---------------------
+ * This class is responsible for handling the rental query and booking operations.
+ */
 
 class RentalController extends AbstractController
 {
     // DocumentManager instance
-    private $documentManager;
-    private $logger;
-    // Constructor to initialize the DocumentManager and LoggerInterface
-    public function __construct(DocumentManager $documentManager, LoggerInterface $logger)
+    private $_documentManager;
+    private $_logger;
+    /**
+     * __construct -
+     * 
+     * This function is responsible for initializing the RentalController class.
+     * 
+     * @param DocumentManager $_documentManager - The document manager
+     * @param LoggerInterface $_logger          - The logger interface
+     * 
+     * @return void
+     */
+    public function __construct(DocumentManager $_documentManager, LoggerInterface $_logger)
     {
-        $this->documentManager = $documentManager;
-        $this->logger          = $logger;
+        $this->_documentManager = $_documentManager;
+        $this->_logger          = $_logger;
     }
 
     // Index action to display all the rentals or filter by city and availability
@@ -51,7 +72,7 @@ class RentalController extends AbstractController
             // Fetch rentals based on city and availability
             // The availability field is an array of objects with start_date and end_date fields
             // So we use elemMatch to query the availability array and see if the user requested dates are available
-            $rentalRepository = $this->documentManager->getRepository(Rental::class);
+            $rentalRepository = $this->_documentManager->getRepository(Rental::class);
             $queryBuilder = $rentalRepository->createQueryBuilder();
 
             $rentals = $queryBuilder
@@ -65,7 +86,7 @@ class RentalController extends AbstractController
                 ->execute();
         } else {
             // Fetch all the rentals
-            $rentals = $this->documentManager->getRepository(Rental::class)->findAll();
+            $rentals = $this->_documentManager->getRepository(Rental::class)->findAll();
         }
 
         // Render the rentals page
@@ -73,8 +94,14 @@ class RentalController extends AbstractController
         return $this->render('rental/index.html.twig', ['rentals' => $rentals]);
     }
 
-    // Details action to display the rental details and calculate the total price
-
+    /**
+     * Details action to display the details of a rental
+     * 
+     * @param Request $request - The request object
+     * @param string  $id      - The rental id
+     * 
+     * @return Response - The response object
+     */
     #[Route('/rental/{id}', name: 'rental_details', methods: ['GET'])]
     public function details(Request $request, string $id): Response
     {
@@ -83,7 +110,7 @@ class RentalController extends AbstractController
 
         $checkIn = $checkInInput ? new DateTime($checkInInput) : null;
         $checkOut = $checkOutInput ? new DateTime($checkOutInput) : null;
-        $rental   = $this->documentManager->getRepository(rental::class)->find($id);
+        $rental   = $this->_documentManager->getRepository(rental::class)->find($id);
 
         // Calculate total price based on night cost and number of days
         if ($checkIn && $checkOut) {
@@ -101,21 +128,28 @@ class RentalController extends AbstractController
         }
 
         // Render the rental details page
-        return $this->render('rental/details.html.twig', [
+        return $this->render(
+            'rental/details.html.twig', [
             'rental' => $rental,
             'totalPrice' => $totalPrice,
-        ]);
+            ]
+        );
     }
 
-    // Create action to create a new rental
-
+    /**
+     * Create action to create a new rental
+     * 
+     * @param Request $request - The request object
+     * 
+     * @return Response - The response object
+     */
     #[Route('/rental/create', name: 'rental_create', methods: ['GET', 'POST'])]
     public function create(Request $request): Response
     {
         // Create a new rental instance
         $rental = new rental();
         // print request
-        $this->logger->info('Request: ' . $request->getContent());
+        $this->_logger->info('Request: ' . $request->getContent());
 
         // Create a form to create a new rental
         $form = $this->createForm(RentalType::class, $rental);
@@ -123,25 +157,33 @@ class RentalController extends AbstractController
 
         // If the form is submitted and valid, persist the rental and redirect to the rentals page
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->documentManager->persist($rental);
-            $this->documentManager->flush();
+            $this->_documentManager->persist($rental);
+            $this->_documentManager->flush();
 
             return $this->redirectToRoute('rental_index');
         }
 
         // Render the create rental page
-        return $this->render('rental/create.html.twig', [
+        return $this->render(
+            'rental/create.html.twig', [
             'form' => $form->createView(),
-        ]);
+            ]
+        );
     }
 
-    // Book action to book a rental
-
+    /**
+     * Edit action to edit an existing rental
+     * 
+     * @param Request $request - The request object
+     * @param string  $id      - The rental id
+     * 
+     * @return Response - The response object
+     */
     #[Route('/rental/book/{rentalId}', name: 'rental_book', methods: ['POST'])]
     public function book(Request $request, $rentalId): Response
     {
         // Fetch the rental by id
-        $rental = $this->documentManager->getRepository(Rental::class)->find($rentalId);
+        $rental = $this->_documentManager->getRepository(Rental::class)->find($rentalId);
 
         // If the rental is not found, throw a 404 exception
         if (! $rental) {
@@ -177,17 +219,17 @@ class RentalController extends AbstractController
         $rental->availability = $newAvailability;
 
         // Persist the booking and rental
-        $this->documentManager->persist($booking);
-        $this->documentManager->persist($rental);
-        $this->documentManager->flush();
+        $this->_documentManager->persist($booking);
+        $this->_documentManager->persist($rental);
+        $this->_documentManager->flush();
 
         // Redirect to a confirmation page or show confirmation message
-        return $this->render('rental/confirmation.html.twig', [
+        return $this->render(
+            'rental/confirmation.html.twig', [
             'rental' => $rental,
             'booking' => $booking,
             'totalPrice' => $totalPrice,
-        ]);
+            ]
+        );
     }
-
-    
 }

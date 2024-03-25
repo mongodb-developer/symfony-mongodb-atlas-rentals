@@ -1,4 +1,14 @@
 <?php
+/**
+ * BookingController
+ * ---------------------
+ * This class is responsible for handling the booking query operations.
+ * 
+ * @category Controller
+ * @package  App\Controller
+ * @author   pavel.duchovny
+ * @license  apache-2.0
+ */
 
 declare(strict_types=1);
 
@@ -20,22 +30,37 @@ use Symfony\Component\Routing\Annotation\Route;
 class BookingController extends AbstractController
 {
     // DocumentManager instance
-    private $documentManager;
-    private $logger;
-    // Constructor to initialize the DocumentManager and LoggerInterface
-    public function __construct(DocumentManager $documentManager, LoggerInterface $logger)
+    private $_documentManager;
+    private $_logger;
+    /**
+     * __construct -
+     * 
+     * This function is responsible for initializing the BookingController class.
+     * 
+     * @param DocumentManager $_documentManager - The document manager
+     * @param LoggerInterface $_logger          - The _logger interface
+     */
+    public function __construct(DocumentManager $_documentManager, LoggerInterface $_logger)
     {
-        $this->documentManager = $documentManager;
-        $this->logger          = $logger;
+        $this->_documentManager = $_documentManager;
+        $this->_logger          = $_logger;
     }
 
-    // Index action to display all the bookings
-
+    
+    /**
+     * index -
+     * 
+     * This function is responsible for rendering the bookings page.
+     * 
+     * @param Request $request - The request object
+     * 
+     * @return Response
+     */
     #[Route('/booking', name: 'booking_index', methods: ['GET'])]
     public function index(Request $request): Response
     {
         // Fetch all the bookings
-        $bookings = $this->documentManager->getRepository(Booking::class)->findAll();
+        $bookings = $this->_documentManager->getRepository(Booking::class)->findAll();
 
         // Render the bookings page
         return $this->render('rental/bookings.html.twig', ['bookings' => $bookings]);
