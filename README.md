@@ -1,6 +1,6 @@
 # symfony-mongodb-atlas-rentals
 
-A sample rental booking project built with PHP Symfony and MongoDB 
+A sample rental booking project built with PHP Symfony and MongoDB. This repository is part of the [Symfony and MongoDB Workshop](https://mongodb-developer.github.io/symfony-mongodb-rental-workshop/).
 
 ## Prerequisites
 [PHP Symfony](https://symfony.com/) is a modern PHP framework that makes it easy to build web applications. It's flexible, scalable, and easy to use. It's also a great way to learn PHP and web development.
