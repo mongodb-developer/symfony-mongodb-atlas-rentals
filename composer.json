@@ -58,7 +58,9 @@
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
-            "@auto-scripts"
+            "@auto-scripts",
+            "Symfony\\Component\\Dotenv\\Dotenv::loadEnv(__DIR__.'/.env')",
+            "[ ! -f .env ] && cp .env.example .env || true"
         ],
         "post-update-cmd": [
             "@auto-scripts"
