@@ -57,6 +57,12 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
+        "pre-install-cmd": [
+            "[ ! -f .env ] && cp .env.example .env"
+        ],
+        "pre-update-cmd": [
+            "[ ! -f .env ] && cp .env.example .env"
+        ],
         "post-install-cmd": [
             "@auto-scripts",
             "Symfony\\Component\\Dotenv\\Dotenv::loadEnv(__DIR__.'/.env')",
