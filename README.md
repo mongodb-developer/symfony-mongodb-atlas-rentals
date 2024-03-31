@@ -76,6 +76,17 @@ php bin/console cache:clear
 
 Open your browser on `http://localhost:8000`
 
+## Deploy to platform.sh
+
+1. Add the needed Atlas URI and database secrets to your env:
+```
+platform variable:create --name env:MONGODB_URL --value '<ATLAS_URI>' --sensitive true
+platform variable:create --name env:MONGODB_DB --value 'symfony'
+```
+2. Push the button
+
+<a href="https://console.platform.sh/projects/create-project/?template=https://github.com/mongodb-developer/symfony-mongodb-atlas-rentals&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://github.com/mongodb-developer/symfony-mongodb-atlas-rentals" target="_blank" title="Deploy with Platform.sh"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg" alt=""></a>
+
 ## Desclaimer 
 
 This is not a MongoDB Inc. official product, use at your own risk.
