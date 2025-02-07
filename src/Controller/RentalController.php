@@ -198,12 +198,15 @@ class RentalController extends AbstractController
         $startDate = $startDateInput ? new DateTime($startDateInput) : null;
         $endDate = $endDateInput ? new DateTime($endDateInput) : null;
 
-
-
-
+        if ($startDate > $endDate) {
+            return $this->render('rental/error.html.twig', [
+                'error' => 'Start date cannot be later than end date.'
+            ]);
+        }
         // Calculate total price based on night cost and number of days
         $interval   = $startDate->diff($endDate);
         $days       = $interval->days;
+        $days = $days ?: 1;  
         $totalPrice = $days * $rental->nightCost;
 
         // Calculate new availability based on the booking dates

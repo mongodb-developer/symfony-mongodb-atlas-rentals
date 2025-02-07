@@ -1,13 +1,7 @@
 <?php
 
-declare(strict_types=1);
-
-use Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle;
-use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
-use Symfony\Bundle\TwigBundle\TwigBundle;
-
 return [
-    FrameworkBundle::class => ['all' => true],
-    DoctrineMongoDBBundle::class => ['all' => true],
-    TwigBundle::class => ['all' => true],
+    Symfony\Bundle\FrameworkBundle\FrameworkBundle::class => ['all' => true],
+    Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle::class => ['all' => true],
+    Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
 ];
