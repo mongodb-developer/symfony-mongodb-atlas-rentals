@@ -205,8 +205,7 @@ class RentalController extends AbstractController
         }
         // Calculate total price based on night cost and number of days
         $interval   = $startDate->diff($endDate);
-        $days       = $interval->days;
-        $days = $days ?: 1;  
+        $days       = $interval->days ?: 1; 
         $totalPrice = $days * $rental->nightCost;
 
         // Calculate new availability based on the booking dates
