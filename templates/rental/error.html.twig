@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking Error{% endblock %}
+
+{% block body %}
+    <h1>Error</h1>
+    <p style="color: red;">{{ error }}</p>
+    <a href="{{ path('rental_index') }}">Go back to rentals</a>
+{% endblock %}
